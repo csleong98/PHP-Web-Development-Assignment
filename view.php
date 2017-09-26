@@ -7,6 +7,7 @@
   <body>
     <table width="90%">
     <tr bgcolor="#CC99FF">
+      <th>Test</th>
     <th>Name</th>
     <th>Phone Number</th>
     <th>Email</th>
