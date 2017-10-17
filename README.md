@@ -4,3 +4,4 @@ A basic repository to learn the functions of Github and also develope a PHP webs
 
 It will consist of HTML, CSS, Javascript, and PHP to communicate with the Database.
 
+Added new files and folders to test the website.
