@@ -7,12 +7,10 @@
   $password = $_POST['password'];
   $password2 = $_POST['confirmpassword'];
 
-		$result = mysqli_query($conn2, "SELECT * FROM users WHERE email='$email'");
-
     $sql="INSERT INTO users(firstname, lastname, email, password)
   	values('$firstname','$lastname','$email','$password');";
 
-    if (mysqli_num_rows($result) > 0){
+    if ($password == $password2){
 
       mysqli_query($conn2,$sql);
 
