@@ -7,20 +7,24 @@
   $password = $_POST['password'];
   $password2 = $_POST['confirmpassword'];
 
+		$result = mysqli_query($conn2, "SELECT * FROM users WHERE email='$email'");
+
     $sql="INSERT INTO users(firstname, lastname, email, password)
   	values('$firstname','$lastname','$email','$password');";
 
-    if ($password == $password2) {
+    if (mysqli_num_rows($result) > 0){
+
       mysqli_query($conn2,$sql);
 
-    	if(mysqli_affected_rows($conn2)<=0)
-    	{
-    		die("<script>alert('Cannot insert data!');</script>");
-    	}
 
     	echo "<script>alert('Successfully to insert data!');</script>";
-    }
-else {
-  echo "<script>alert('Password does not match');</script>";
+
+			header("location: signup.php");
+
+    	}
+
+			else
+			{
+  		echo "<script>alert('Password does not match');</script>";
 }
 ?>
