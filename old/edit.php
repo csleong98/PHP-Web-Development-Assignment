@@ -49,6 +49,12 @@
                 </td>
             </tr>
             <tr>
+                <th>Home Address:</th>
+                <td>
+                    <textarea name="home_address" cols="30" rows="10" <?php echo $rows['contact_address'];?>></textarea>    
+                </td>
+            </tr>
+            <tr>
                 <th>Gender:</th>
                 <td>
                     <input type="radio" name="gender" value="Male" <?php if($rows['contact_gender'] == "Male") echo "checked"?> require>Male
@@ -70,7 +76,15 @@
             <tr>
                 <th>Date of Birth:</th>
                 <td>
-                    <input type="date" name="date" value="<?php echo $rows['contact_dob']?>" require>
+                    <input type="date" name="dob" value="<?php echo $rows['contact_dob']?>" require>
+                </td>
+            </tr>
+            <!-- add a update button for this page -->
+            <tr>
+                <td colspan="2">
+                    <br>
+                    <input type="submit" value="Update"/>&nbsp;&nbsp;
+                    <input type="submit" value="Back to Previous Page" formaction="view.php">
                 </td>
             </tr>
         </table>
