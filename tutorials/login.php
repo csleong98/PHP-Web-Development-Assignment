@@ -11,8 +11,14 @@
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result)<=0) {
-    echo "<script>alert('Wrong username / password !Please Try Again!');";
-    die("window.history.go(-1);</script>");
+
+    $sql = "SELECT * from users WHERE username = '".$username."' AND password = '".$password."'";
+    $result = mysqli_query($conn, $sql);
+
+      if (mysqli_num_rows($result)<=0) {
+        echo "<script>alert('Wrong username / password !Please Try Again!');";
+        die("window.history.go(-1);</script>");
+      }
   }
 
   if ($row=mysqli_fetch_array($result)) {
@@ -24,7 +30,7 @@
   }
   if ($_SESSION['role']==="1") {
     echo "<script>alert('Welcome back! ".$_SESSION['user']."');";
-    echo "window.location.href='default.html';</script>";
+    echo "window.location.href='default.php';</script>";
   }
   else if($_SESSION['role'] ==="0") {
     echo "<script>alert('Welcome back! ".$_SESSION['admin']."');";
