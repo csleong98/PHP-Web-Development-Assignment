@@ -13,8 +13,10 @@
     die("window.history.go(-1);</script>");
   }
 
-  $sql = "INSERT into USERS (username, password, email, registrationdate) ".
-  "VALUES ('$username','".md5($password)."','$email',Now());";
+include "fileupload.php";
+
+  $sql = "INSERT into USERS (username, password, email, register_date, photolink) ".
+  "VALUES ('$username','".md5($password)."','$email',Now(), '$newfilename');";
   mysqli_query($conn, $sql);
 
   //echo $sql;
