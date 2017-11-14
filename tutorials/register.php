@@ -24,7 +24,7 @@ include "fileupload.php";
     echo "<script>alert('Unable to register ! \\nPlease Try Again!');";
     die("window.history.go(-1);</script>");
   }
-
+  include "email.php";
   echo "<script>alert('Register Successfully! Please login now!');";
   echo "window.location.href='login.html';</script>";
  ?>
