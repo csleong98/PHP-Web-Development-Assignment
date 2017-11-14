@@ -8,9 +8,10 @@ $mail -> isSMTP(); //email protocol
 $mail -> Host = 'smtp.gmail.com'; //hostname gmail : server address
 $mail -> Port = 587; //port number
 $mail -> SMTPSecure='tls'; //secure layer
+$mail -> SMTPAuth = TRUE;
 $mail -> FromName = "May Contact Book Store"; //give
 
-$mail -> Username = "macintoshleong@gmail.com" //your gmail username and password
+$mail -> Username = "macintoshleong@gmail.com"; //your gmail username and password
 
 $file = fopen("email.txt","r"); //read file for password.
 $newpass = fgets($file);
