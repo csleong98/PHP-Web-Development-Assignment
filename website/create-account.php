@@ -1,28 +1,24 @@
 <?php
 	include "connection2.php";
 
-	$firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  $password2 = $_POST['confirmpassword'];
+	$firstname = mysqli_real_escape_string($conn2, $_POST['firstname']);
+  $lastname = mysqli_real_escape_string($conn2, $_POST['lastname']);
+  $email = mysqli_real_escape_string($conn2, $_POST['email']);
+  $password = mysqli_real_escape_string($conn2, $_POST['password']);
+  $password2 = mysqli_real_escape_string($conn2, $_POST['confirmpassword']);
 
-    $sql="INSERT INTO users(firstname, lastname, email, password)
-  	values('$firstname','$lastname','$email','$password');";
 
-    if ($password == $password2){
+	if ($password !== $password2) {
+		echo "<script>alert('Password and confirmed password not match.');";
+		die("window.history.go(-1);</script>");
+	}
+
+    $sql="INSERT INTO users(firstname, lastname, email, password) ".
+  	"values ('$firstname','$lastname','$email','".md5($password)."');";
 
       mysqli_query($conn2,$sql);
-
-
     	echo "<script>alert('Successfully to insert data!');</script>";
 
 			header("location: signup.php");
 
-    	}
-
-			else
-			{
-  		echo "<script>alert('Password does not match');</script>";
-}
 ?>
