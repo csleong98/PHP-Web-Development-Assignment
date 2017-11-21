@@ -4,17 +4,18 @@
 
   include "connection.php";
 
-  $username = mysqli_real_escape_string($conn, $_POST['user']);
-  $password = mysqli_real_escape_string($conn, $_POST['pass']);
+  $username = mysqli_real_escape_string($conn2, $_POST['user']);
+  $password = mysqli_real_escape_string($conn2, $_POST['pass']);
 
-  $sql = "SELECT * FROM users WHERE username = '".$username."' AND password = '".md5($password)."';";
-  $result = mysqli_query($conn, $sql);
-
+ 
+  $sql = "SELECT * FROM users WHERE username = '".$username."' AND password = '".md5($password)."'";
+  $result = mysqli_query($conn2, $sql);
   if (mysqli_num_rows($result)<=0) {
 
     $sql = "SELECT * from users WHERE username = '".$username."' AND password = '".$password."'";
-    $result = mysqli_query($conn, $sql);
-
+    $result = mysqli_query($conn2, $sql);
+  
+ 
       if (mysqli_num_rows($result)<=0) {
         echo "<script>alert('Wrong username / password !Please Try Again!');";
         die("window.history.go(-1);</script>");

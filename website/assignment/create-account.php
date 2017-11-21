@@ -14,7 +14,7 @@
     $sql="INSERT INTO users(username, email, password, register_date) ".
   	"values ('$username','$email','".md5($password)."',Now());";
 
-			mysqli_query($conn2,$sql);
+		mysqli_query($conn2, $sql);
 			
 			if (mysqli_affected_rows($conn2)<=0) {
 				echo "<script>alert('Unable to register ! \\nPlease Try Again!');";
