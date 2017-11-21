@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Registration Form</h1>
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" enctype="multipart/form-data">
       <table>
         <tr>
           <th>Username:</th><td><input id="user" type="text" name="user" required></td>
@@ -19,6 +19,11 @@
         </tr>
         <tr>
           <th>Email Address:</th><td><input id="email" type="text" name="email" required></td>
+        </tr>
+        <tr>
+          <th>Photo Upload: </th>
+          <td><input id="fileupload" name="fileupload" type="file" required>
+          </td>
         </tr>
         <tr>
           <th colspan="2"><br><input id="register" type="submit" value="Regiser as new user">&nbsp;&nbsp;

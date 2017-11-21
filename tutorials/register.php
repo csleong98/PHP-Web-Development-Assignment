@@ -13,8 +13,10 @@
     die("window.history.go(-1);</script>");
   }
 
-  $sql = "INSERT into USERS (username, password, email, registrationdate) ".
-  "VALUES ('$username','".md5($password)."','$email',Now());";
+include "fileupload.php";
+
+  $sql = "INSERT into USERS (username, password, email, register_date, photolink) ".
+  "VALUES ('$username','".md5($password)."','$email',Now(), '$newfilename');";
   mysqli_query($conn, $sql);
 
   //echo $sql;
@@ -22,7 +24,7 @@
     echo "<script>alert('Unable to register ! \\nPlease Try Again!');";
     die("window.history.go(-1);</script>");
   }
-
+  include "email.php";
   echo "<script>alert('Register Successfully! Please login now!');";
   echo "window.location.href='login.html';</script>";
  ?>
