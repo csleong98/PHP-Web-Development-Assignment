@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
 /* Global Styles */
 
 html,
@@ -12,7 +13,8 @@ body {
 }
 
 body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 50px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .img-portfolio {
@@ -23,36 +25,56 @@ body {
     opacity: 0.8;
 }
 
+
 /* Full Page Imager Header */
+
 .masthead {
-  text-align: left;
-  color: white;
-  background-image: url(../img/header-bg.jpg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    text-align: left;
+    color: white;
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 
 /* Header Search Bar */
+
 #search-input {
-  border: 1px solid #ffffff;
-  height: 80px;
-  width: 50%;
-  margin: 300px 10px 300px 250px;
+    border: 1px solid #ffffff;
+    height: 80px;
+    width: 50%;
+    margin: 300px 10px 300px 250px;
 }
 
-#search-input[type="text"]{
-  font-size: 25px;
-  font-family: Montserrat;
-  font-weight: 200;
-
+#search-input[type="text"] {
+    font-size: 25px;
+    font-family: Montserrat;
+    font-weight: 200;
 }
+
+#view-all-link {
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 15px;
+    white-space: nowrap;
+    text-align: right;
+    padding-left: 73%;
+}
+
+.page-header {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #484848;
+}
+
 
 /* Home Page Carousel */
+
 
 /*header.carousel {
     height: 50%;
@@ -71,52 +93,56 @@ header.carousel .fill {
     background-size: cover;
 }*/
 
+
 /* 404 Page Styles */
 
+
 /* carousel */
+
 .carousel-indicators {
-  bottom: -23px;
+    bottom: -23px;
 }
 
 .carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #333;
-  border: 1px solid #333;
-  border-radius: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 10px;
 }
 
 .carousel-control {
-  position: absolute;
-  top: 45%;
-  left: 15px;
-  width: 40px;
-  height: 40px;
-  margin: -20px -20px 0 -34px;
-  font-size: 12px;
-  font-weight: 100;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  background: #222222;
-  border: 3px solid #ffffff;
-  -webkit-border-radius: 23px;
-  -moz-border-radius: 23px;
-  border-radius: 23px;
-  opacity: 0.5;
+    position: absolute;
+    top: 45%;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    margin: -20px -20px 0 -34px;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    background: #222222;
+    border: 3px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
 }
 
 .chevron {
-  padding-top: 12px;
+    padding-top: 12px;
 }
 
 .error-404 {
     font-size: 100px;
 }
+
 
 /* Pricing Page Styles */
 
@@ -137,16 +163,20 @@ header.carousel .fill {
     font-style: italic;
 }
 
+
 /* Sign Up Modal */
+
 .signup-icon {
-  padding-right: 2px;
+    padding-right: 2px;
 }
+
 
 /* Footer Styles */
 
 footer {
     margin: 50px 0;
 }
+
 
 /* Responsive Styles */
 
@@ -161,7 +191,6 @@ footer {
     .img-portfolio {
         margin-bottom: 15px;
     }
-
     header.carousel .carousel {
         height: 70%;
     }
