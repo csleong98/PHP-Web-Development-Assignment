@@ -30,7 +30,7 @@
   }
   if ($_SESSION['role']==="1") {
     echo "<script>alert('Welcome back! ".$_SESSION['user']."');";
-    echo "window.location.href='default.php';</script>";
+    echo "window.location.href='user1.html';</script>";
   }
   else if($_SESSION['role'] ==="0") {
     echo "<script>alert('Welcome back! ".$_SESSION['admin']."');";

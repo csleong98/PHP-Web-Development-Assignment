@@ -51,7 +51,7 @@
             <a class="" href="contact.html">Contact Us</a>
           </li>
           <li>
-            <a class="" href="signup.html">Sign Up</a>
+            <a class="" href="register.html">Sign Up</a>
           </li>
           <li>
             <a class="" href="login.html">Log In</a>
@@ -84,7 +84,6 @@
           <a id="view-all-link" href="view-all.html">View all</a>
       </div>
       </h2>
-
     </div>
     <div class="col-md-12">
       <div id="myCarousel" class="carousel slide">
@@ -225,11 +224,11 @@
   </div>
 
   <!-- Sign Up Modal -->
-  <div class="modal fade" id="signup" role="dialog">
-    <div class="modal-dialog">
+  <!-- <div class="modal fade" id="signup" role="dialog">
+    <div class="modal-dialog"> -->
 
-      <!-- Modal content-->
-      <div class="modal-content">
+  <!-- Modal content-->
+  <!-- <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Sign Up</h4>
@@ -274,7 +273,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- /.Sign Up Modal -->
 
   <!-- Log In Modal -->
@@ -288,28 +287,28 @@
           <h4 class="modal-title">Log In</h4>
         </div>
         <div class="modal-body">
-          <form class="" action="php" method="post">
+          <form class="" action="login.php" method="post">
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-user signup-icon"></i>
               </span>
-              <input class="form-control" type="text" name="username" value="" placeholder="Username">
+              <input class="form-control" type="text" name="user" placeholder="Username" required>
             </div>
             <br>
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="fa fa-unlock-alt"></i>
               </span>
-              <input class="form-control" type="text" name="password" value="" placeholder="Password">
+              <input class="form-control" type="password" name="pass" placeholder="Password" required>
             </div>
             <br>
             <div class="form-group">
-              <button style="margin-left: 235px;" class="btn btn-lg btn-info" type="button" name="button">Log In</button>
+              <button style="margin-left: 235px;" class="btn btn-lg btn-info" type="submit">Log In</button>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

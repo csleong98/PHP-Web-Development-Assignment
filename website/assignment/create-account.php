@@ -1,5 +1,5 @@
 <?php
-	include "php/connection.php";
+	include "connection.php";
 
 	$username = mysqli_real_escape_string($conn2, $_POST['username']);
   $email = mysqli_real_escape_string($conn2, $_POST['email']);
@@ -12,7 +12,7 @@
 	}
 
     $sql="INSERT INTO users(username, email, password, register_date) ".
-  	"values ('$username', '$email','".md5($password)."', Now();";
+  	"values ('$username','$email','".md5($password)."',Now());";
 
 			mysqli_query($conn2,$sql);
 			
