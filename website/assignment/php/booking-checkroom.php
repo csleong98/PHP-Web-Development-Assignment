@@ -19,31 +19,30 @@ $sql2 = "SELECT * FROM rooms WHERE roomName='$roomname'";
 
 $result = mysqli_query($conn2, $sql2);
 
-if(mysqli_num_rows($result)<=0) //if no result there
-{
-    die("<script>alert('No data from database!');</script>");
-}
+// if(mysqli_num_rows($result)<=0) //if no result there
+// {
+//     die("<script>alert('No data from database!');</script>");
+// }
 
 while($rows = mysqli_fetch_array($result))
 {
-    if($rows['checkInTime'] == $cit)
+    if($rows['checkInTime']==$cit) 
     {
-        echo 'same time';
+        echo "<script>alert('This date has been booked by other guest.\\nPlease choose another date.');";
+        echo "window.location.href='../venus.html';</script>";
+    }
+    else if ($rows['checkOutTime']==$cot) 
+    {
+        echo "<script>alert('This date has been booked by other guest.\\nPlease choose another date.');";
+        echo "window.location.href='../mercury.php';</script>";
     }
     else
     {
-        echo 'not same';
+        mysqli_query($conn2, $sql);
+        echo "<script>alert('Booking Successful!');";
+        die("window.history.go(-1);</script>");   
     }
 }
-// while ($rows = mysqli_fetch_array($result)) {
-//     if($rows['checkInTime'] == $cit) {
-//         echo 'same time';
-//     }
-//     else {
-//         echo 'not working';
-//     }
-// }
-// echo $result;
 
 // mysqli_query($conn2, $sql);
 

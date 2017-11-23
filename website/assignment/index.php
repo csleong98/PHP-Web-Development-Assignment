@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Interstellar</a>
+                <a class="navbar-brand" href="index.php">Interstellar</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -62,7 +62,9 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="" href="user-profile.php">
-                                    <?php echo $_SESSION['user'] ?>
+                                    <?php
+                                            echo $_SESSION['user']; 
+                                    ?>
                                 </a>
                             </li>
                             <li>
@@ -112,7 +114,7 @@
                     <div class="item active">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="venus.html" class="thumbnail">
+                                <a href="venus.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Venus
@@ -120,7 +122,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="mercury.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Mercury

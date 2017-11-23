@@ -1,3 +1,9 @@
+<?php 
+
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Venus Room</title>
+    <title>Mercury Room</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -52,11 +58,23 @@
                     <li>
                         <a class="" href="contact.html">Contact Us</a>
                     </li>
-                    <li>
-                        <a class="" href="register.html">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="" data-target="#login" data-toggle="modal">Log In</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="" href="user-profile.php">
+                                    <?php
+                                    echo $_SESSION['user']; 
+                                ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="" href="./php/logout.php">Log Out</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -70,7 +88,7 @@
 
         <div class="row">
             <div class="col-md-9">
-                <h2 class="page-header">Venus</h2>
+                <h2 class="page-header">Mercury</h2>
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                     <div class="caption-full">
@@ -166,7 +184,7 @@
                             <div class="col-md-12">
                                 <label>Select this Room :</label>
                                 <select type="text" name="room">
-                                    <option value="venus">Venus</option>
+                                    <option value="mercury">Mercury</option>
                                 </select>
                                 <label>Check-In Time :</label>
                                 <input type="date" name="check-in-time" id="check-in-time" onchange="cal()">
@@ -215,7 +233,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    
     <!-- Custom Javascript -->
     <script type="text/javascript">
         function GetDays() {
