@@ -34,7 +34,8 @@
     echo "window.location.href='../index.php';</script>";
   }
   else if($_SESSION['role'] ==="0") {
-    echo "<script>alert('Welcome back! ".$_SESSION['admin']."');";
+    echo "<script>alert('Welcome back! ".$_SESSION['user']."');";
+    echo "window.location.href='../admin.php';</script>";
     //echo "window.location.href='admin.html';</script>";
   }
   else {
