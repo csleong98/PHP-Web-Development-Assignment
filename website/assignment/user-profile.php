@@ -1,17 +1,14 @@
 <?php 
 session_start();
-  
+
 include('./php/connection.php');
 
-$sql = "Select * from users";
+$user = $_SESSION['user'];
+
+$sql = "SELECT * FROM users WHERE username = $user";
 
 $result = mysqli_query($conn2, $sql); //run the sql query
 
-if(mysqli_num_rows($result)<=0) //if no result there
-{
-    die("<script>alert('No data from database!');</script>");
-}
-    
 ?>
 <!DOCTYPE>
 <html lang="en">
@@ -42,7 +39,7 @@ if(mysqli_num_rows($result)<=0) //if no result there
 </head>
 
 <body>
-    
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -54,7 +51,7 @@ if(mysqli_num_rows($result)<=0) //if no result there
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Interstellar</a>
+                <a class="navbar-brand" href="index.php">Interstellar</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -94,26 +91,14 @@ if(mysqli_num_rows($result)<=0) //if no result there
                     <fieldset>
                         <!-- Text input-->
                         <div class="form-group">
-                            <div class="col-md-offset-5 col-xs-offset-5">
-                                <img src="http://websamplenow.com/30/userprofile/images/avatar.jpg" class="img-responsive img-thumbnail ">
-                            </div>
-                            <br>
                             <label class="col-md-4 control-label" for="username">Username</label>
                             <div class="col-md-4">
                                 <div class="input-group">
                                     <div class="input-group-addon">
                                         <i class="fa fa-user"></i>
                                     </div>
-                                    <input id="Username" name="username" type="text" class="form-control input-md">
+                                    <input id="Username" name="username" type="text" class="form-control input-md"> <?php while($rows = mysqli_fetch_array($result)) {echo $rows['username'];} ?>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- File Button -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="Upload photo">Upload photo</label>
-                            <div class="col-md-4">
-                                <input id="Upload photo" name="Upload photo" class="input-file" type="file">
                             </div>
                         </div>
 
