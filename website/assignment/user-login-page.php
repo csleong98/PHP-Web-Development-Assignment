@@ -112,7 +112,7 @@
                     <div class="item active">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="venus.html" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Venus
