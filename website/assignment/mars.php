@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mercury Room</title>
+    <title>Mars Room</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,8 +67,8 @@
                             <li>
                                 <a class="" href="user-profile.php">
                                     <?php
-                                    echo $_SESSION['user']; 
-                                ?>
+                                        echo $_SESSION['user']; 
+                                    ?>
                                 </a>
                             </li>
                             <li>
@@ -88,7 +88,7 @@
 
         <div class="row">
             <div class="col-md-9">
-                <h2 class="page-header">Mercury</h2>
+                <h2 class="page-header">Mars</h2>
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                     <div class="caption-full">
@@ -119,7 +119,7 @@
                             <div class="col-md-12">
                                 <label>Select this Room :</label>
                                 <select type="text" name="room">
-                                    <option value="mercury">Mercury</option>
+                                    <option value="mars">Mars</option>
                                 </select>
                                 <label>Check-In Time :</label>
                                 <input type="date" name="check-in-time" id="check-in-time" onchange="cal()">
