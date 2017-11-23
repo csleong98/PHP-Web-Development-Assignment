@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Venus Room</title>
+    <title>Jupiter Room</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -88,7 +88,7 @@
 
         <div class="row">
             <div class="col-md-9">
-                <h2 class="page-header">Venus</h2>
+                <h2 class="page-header">Jupiter</h2>
                 <div class="thumbnail">
                     <img class="img-responsive" src="http://placehold.it/800x300" alt="">
                     <div class="caption-full">
@@ -119,7 +119,7 @@
                             <div class="col-md-12">
                                 <label>Select this Room :</label>
                                 <select type="text" name="room">
-                                    <option value="venus">Venus</option>
+                                    <option value="jupiter">Jupiter</option>
                                 </select>
                                 <label>Check-In Time :</label>
                                 <input type="date" name="check-in-time" id="check-in-time" onchange="cal()">
@@ -155,7 +155,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2017</p>
+                    <p>Copyright &copy; Interstellar 2017</p>
                 </div>
             </div>
         </footer>
