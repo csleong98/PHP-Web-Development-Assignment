@@ -152,7 +152,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="jupiter.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/jupiter.jpg" alt="">
                                     <div class="caption">
                                         Jupiter
                                     </div>
@@ -160,7 +160,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="neptune.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/neptune.jpg" alt="">
                                     <div class="caption">
                                         Neptune
                                     </div>
@@ -168,7 +168,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="uranus.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/uranus.jpg" alt="">
                                     <div class="caption">
                                         Uranus
                                     </div>
@@ -176,7 +176,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="saturn.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/saturn.jpg" alt="">
                                     <div class="caption">
                                         Saturn
                                     </div>
@@ -195,37 +195,6 @@
                 </a>
             </div>
         </div>
-        <!-- /.row -->
-
-        <!-- Features Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Popular Reservations</h2>
-            </div>
-            <div class="col-md-6">
-                <p>The Modern Business template by Start Bootstrap includes:</p>
-                <ul>
-                    <li>
-                        <strong>Bootstrap v3.2.0</strong>
-                    </li>
-                    <li>jQuery v1.11.0</li>
-                    <li>Font Awesome v4.1.0</li>
-                    <li>Working PHP contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                    <li>17 HTML pages</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit,
-                    quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus
-                    unde.
-                </p>
-                <br>
-                <a class="btn btn-lg btn-info btn-block" href="#">Book Now</a>
-            </div>
-            <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
-            </div>
-        </div>
-
         <!-- /.row -->
 
         <hr>
