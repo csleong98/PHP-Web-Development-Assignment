@@ -45,7 +45,6 @@ body {
 /* Header Search Bar */
 
 #search-input {
-    border: 1px solid #ffffff;
     height: 80px;
     width: 50%;
     margin: 300px 10px 300px 250px;

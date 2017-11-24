@@ -123,6 +123,9 @@
                                 echo "<td>".$status."</td>";
                                 echo "<td>".$rows['register_date']."</td>";
 
+                                echo"<td><a href='admin-edit.php?id=".$rows['UserID']."'>";
+                                echo"<button>Edit</button></a></td>";
+                                
                                 echo "</tr>";
                             }
                             ?>
@@ -137,7 +140,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Copyright &copy; Your Website 2014</p>
+                        <p>Copyright &copy; Interstellar 2017</p>
                     </div>
                 </div>
             </footer>

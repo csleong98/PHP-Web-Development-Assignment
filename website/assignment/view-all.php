@@ -1,3 +1,8 @@
+<?php 
+
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,11 +56,23 @@
                     <li>
                         <a class="" href="contact.html">Contact Us</a>
                     </li>
-                    <li>
-                        <a class="" href="register.html">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="" data-target="#login" data-toggle="modal">Log In</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="" href="user-profile.php">
+                                    <?php
+                                echo $_SESSION['user']; 
+                            ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="" href="./php/logout.php">Log Out</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -73,7 +90,7 @@
                 <h2 class="page-header">Interstellar Rooms</h2>
                 <ol class="breadcrumb">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li class="active">All available rooms</li>
                 </ol>
@@ -84,40 +101,19 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
-                <a href="venus.html">
+                <a href="venus.php">
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="venus.html">Venus</a>
+                    <a href="venus.php">Venus</a>
                 </h3>
             </div>
             <div class="col-md-6 img-portfolio">
-                <a href="mercury.html">
+                <a href="mercury.php">
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="mercury.html">Mercury</a>
-                </h3>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 img-portfolio">
-                <a href="mars.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="mars.html">Mars</a>
-                </h3>
-            </div>
-            <div class="col-md-6 img-portfolio">
-                <a href="moon.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="moon.html">Moon</a>
+                    <a href="mercury.php">Mercury</a>
                 </h3>
             </div>
         </div>
@@ -126,19 +122,19 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
-                <a href="jupiter.html">
+                <a href="mars.php">
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="jupiter.html">Jupiter</a>
+                    <a href="mars.php">Mars</a>
                 </h3>
             </div>
             <div class="col-md-6 img-portfolio">
-                <a href="neptune.html">
+                <a href="moon.php">
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="neptune.html">Neptune</a>
+                    <a href="moon.php">Moon</a>
                 </h3>
             </div>
         </div>
@@ -147,21 +143,42 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 img-portfolio">
-                <a href="uranus.html">
+                <a href="jupiter.php">
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="uranus.html">Uranus</a>
+                    <a href="jupiter.php">Jupiter</a>
+                </h3>
+            </div>
+            <div class="col-md-6 img-portfolio">
+                <a href="neptune.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="neptune.php">Neptune</a>
+                </h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-6 img-portfolio">
+                <a href="uranus.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="uranus.php">Uranus</a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna
                     varius vitae.</p>
             </div>
             <div class="col-md-6 img-portfolio">
-                <a href="saturn.html">
+                <a href="saturn.php">
                     <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
                 </a>
                 <h3>
-                    <a href="saturn.html">Saturn</a>
+                    <a href="saturn.php">Saturn</a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna
                     varius vitae.</p>
@@ -175,7 +192,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Interstellar 2017</p>
                 </div>
             </div>
         </footer>

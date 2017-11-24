@@ -1,23 +1,14 @@
 <?php 
 
     session_start();
-    include("./php/connection.php");
-    $sql = "SELECT * FROM rooms";
 ?>
 
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Interstellar Admin Page</title>
-
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Edit User Page</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -82,76 +73,60 @@
         </div>
         <!-- /.container -->
     </nav>
+    <!-- Step 1: use PHP to read database -->
 
-    <!-- Page Content -->
-    <div class="container">
+    <?php
 
-        <!-- Hotel List Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Registered User List</h2>
-                <div class="table-responsive table-striped">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>BookingID</th>
-                                <th>Username</th>
-                                <th>Room Name</th>
-                                <th>Check In Time</th>
-                                <th>Check Out Time</th>
-                                <th>Number of Days Booked</th>
-                                <th>Total Price</th>
-                                <th>Day of Booking</th>
-                            </tr>
-                        </thead>
-                        <?php 
-                            
-                            $result = mysqli_query($conn2, $sql);
-
-                            if(mysqli_num_rows($result)<=0)
-                            {
-                                die("<script>alert('No data from database!');</script>");
-                            }
-
-                            while($rows = mysqli_fetch_array($result))
-                            {
-                                echo "<tr>";
-                                echo "<td>".$rows['bookID']."</td>";
-                                echo "<td>".$rows['bookedUser']."</td>";
-                                echo "<td>".$rows['roomName']."</td>";
-                                echo "<td>".$rows['checkInTime']."</td>";
-                                echo "<td>".$rows['checkOutTime']."</td>";                                
-                                echo "<td>".$rows['days']."</td>";
-                                echo "<td>".$rows['totalprice']."</td>";
-                                echo "<td>".$rows['bookDay']."</td>";
-
-                                
-                                echo "</tr>";
-                            }
-                            ?>
-                    </table>
-
-                </div>
-            </div>
-
-            <hr>
-
-            <!-- Footer -->
-            <footer>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; Interstellar 2017</p>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- Log In Modal -->
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
-
+    /* a. get is from URL */
+    $uid = $_GET['id'];
+    // b. connect to database 
+    include("./php/connection.php");
+    //c. write the sql query
+    $sql = "SELECT * FROM users WHERE id = $uid";
+    //d. execute the sql query
+    $result = mysqli_query($conn, $sql);
+    //e. get the data from the database into array
+    if($rows=mysqli_fetch_array($result))
+    {
+?>
+        <!-- Step 2: use HTML Form and PHP to display the resut -->
+        <form method="POST" action="update.php">
+            <table style="text-align: left;">
+                <tr>
+                    <th width="200px">ID</th>
+                    <td>
+                        <input type="text" value="<?php echo $uid;?>" name="uid" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <td width "300px">
+                        <input type="text" name="name" value="<?php echo $rows['username']?>" require>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>
+                        <input type="text" name="email" value="<?php echo $rows['email']?>" require>
+                    </td>
+                </tr>
+                <!-- add a update button for this page -->
+                <tr>
+                    <td colspan="2">
+                        <br>
+                        <input type="submit" value="Update" />&nbsp;&nbsp;
+                        <input type="submit" value="Back to Previous Page" formaction="view.php">
+                    </td>
+                </tr>
+            </table>
+        </form>
 </body>
+<?php 
+    }
+    else
+    {
+        die("<script>alert('No such user'); window.location.href='admin.php'</script>");
+    }
+?>
 
 </html>

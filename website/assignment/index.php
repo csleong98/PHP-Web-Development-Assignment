@@ -52,7 +52,7 @@
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="" href="contact.html">Contact Us</a>
+                        <a class="" href="contact.php">Contact Us</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -61,7 +61,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="" href="user-profile.php">
+                                <a>
                                     <?php
                                             echo $_SESSION['user']; 
                                     ?>
@@ -130,7 +130,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="mars.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Mars
@@ -138,7 +138,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="moon.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Moon
@@ -151,7 +151,7 @@
                     <div class="item">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="jupiter.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Jupiter
@@ -159,7 +159,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="neptune.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Neptune
@@ -167,7 +167,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="uranus.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Uranus
@@ -175,7 +175,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <a href="room-details.html" class="thumbnail">
+                                <a href="saturn.php" class="thumbnail">
                                     <img style="width: 100%;" src="img/img-carousel.svg" alt="">
                                     <div class="caption">
                                         Saturn
@@ -234,7 +234,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Interstellar 2017</p>
                 </div>
             </div>
         </footer>

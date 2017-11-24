@@ -10,17 +10,44 @@ if(empty($_POST['name'])      ||
    return false;
    }
    
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+   $name = strip_tags(htmlspecialchars($_POST['name']));
+   $email_address = strip_tags(htmlspecialchars($_POST['email']));
+   $phone = strip_tags(htmlspecialchars($_POST['phone']));
+   $message = strip_tags(htmlspecialchars($_POST['message']));
+
+   date_default_timezone_set('Etc/UTC');
+   require './PHPMailer-master/PHPMailerAutoload.php';
    
-// Create the email and send the message
-$to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
-mail($to,$email_subject,$email_body,$headers);
-return true;         
+   $mail = new PHPMailer; //create object of PHPMailer
+   $mail -> isSMTP(); //email protocol
+   $mail -> Host = 'smtp.gmail.com'; //hostname gmail : server address
+   $mail -> Port = 587; //port number
+   $mail -> SMTPSecure='tls'; //secure layer
+   $mail -> SMTPAuth = TRUE;
+   $mail -> FromName = "May Contact Book Store"; //give
+   
+   $mail -> Username = "macintoshleong@gmail.com"; //your gmail username and password
+   
+   $file = fopen("email.txt","r"); //read file for password.
+   $newpass = fgets($file);
+   fclose($file);
+   
+   $mail -> Password = "$newpass";
+   
+   //email receiver details
+   $mail -> addaddress($email,$username); //receive person
+   
+//email subject
+$mail -> subject = 'Request to change data for user!';
+
+//emil body
+$mail -> $message;
+
+if(!$mail->send()) {
+    echo "<script>alert('Mailer Error: ". $mail->ErrorInfo."');";
+    die("window.history.go(-1);</script>");
+}
+else {
+    echo "<script>alert('Message has been sent');</script>";
+}
 ?>
