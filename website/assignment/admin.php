@@ -122,9 +122,6 @@
                                 }
                                 echo "<td>".$status."</td>";
                                 echo "<td>".$rows['register_date']."</td>";
-
-                                echo"<td><a href='admin-edit.php?id=".$rows['UserID']."'>";
-                                echo"<button>Edit</button></a></td>";
                                 
                                 echo "</tr>";
                             }

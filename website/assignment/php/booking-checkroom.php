@@ -29,12 +29,13 @@ while($rows = mysqli_fetch_array($result))
     if($rows['checkInTime']==$cit) 
     {
         echo "<script>alert('This date has been booked by other guest.\\nPlease choose another date.');";
-        echo "window.location.href='../venus.html';</script>";
+        die("window.history.go(-1);</script>");   
+        
     }
     else if ($rows['checkOutTime']==$cot) 
     {
         echo "<script>alert('This date has been booked by other guest.\\nPlease choose another date.');";
-        echo "window.location.href='../mercury.php';</script>";
+        die("window.history.go(-1);</script>");           
     }
     else
     {

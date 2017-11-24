@@ -90,7 +90,7 @@
             <div class="col-md-9">
                 <h2 class="page-header">Mars</h2>
                 <div class="thumbnail">
-                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <img class="img-responsive" src="WDTpictures/mars.jpeg" alt="">
                     <div class="caption-full">
                     <h4 class="pull-right">RM120 (per night)</h4>
                     <h4>

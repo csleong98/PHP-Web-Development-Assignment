@@ -89,7 +89,7 @@
         <!-- Hotel List Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Registered User List</h2>
+                <h2 class="page-header">Bookings List</h2>
                 <div class="table-responsive table-striped">
                     <table class="table">
                         <thead>

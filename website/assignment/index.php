@@ -115,7 +115,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="venus.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/venus.jpg" alt="">
                                     <div class="caption">
                                         Venus
                                     </div>
@@ -123,7 +123,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="mercury.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/mercury.jpg" alt="">
                                     <div class="caption">
                                         Mercury
                                     </div>
@@ -131,7 +131,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="mars.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/mars.jpeg" alt="">
                                     <div class="caption">
                                         Mars
                                     </div>
@@ -139,7 +139,7 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <a href="moon.php" class="thumbnail">
-                                    <img style="width: 100%;" src="img/img-carousel.svg" alt="">
+                                    <img style="width: 100%;" src="WDTpictures/moon.jpg" alt="">
                                     <div class="caption">
                                         Moon
                                     </div>

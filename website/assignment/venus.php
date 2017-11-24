@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Interstellar</a>
+                <a class="navbar-brand" href="index.php">Interstellar</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -90,7 +90,7 @@
             <div class="col-md-9">
                 <h2 class="page-header">Venus</h2>
                 <div class="thumbnail">
-                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <img class="img-responsive" src="WDTpictures/venus.jpg" alt="">
                     <div class="caption-full">
                         <h4 class="pull-right">RM120 (per night)</h4>
                         <h4>
