@@ -102,7 +102,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="venus.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/venus.jpg" alt="">
                 </a>
                 <h3>
                     <a href="venus.php">Venus</a>
@@ -110,7 +110,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="mercury.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/mercury.jpg" alt="">
                 </a>
                 <h3>
                     <a href="mercury.php">Mercury</a>
@@ -123,7 +123,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="mars.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/mars.jpeg" alt="">
                 </a>
                 <h3>
                     <a href="mars.php">Mars</a>
@@ -131,7 +131,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="moon.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/moon.jpg" alt="">
                 </a>
                 <h3>
                     <a href="moon.php">Moon</a>
@@ -144,7 +144,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="jupiter.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/jupiter.jpg" alt="">
                 </a>
                 <h3>
                     <a href="jupiter.php">Jupiter</a>
@@ -152,7 +152,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="neptune.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/neptune.jpg" alt="">
                 </a>
                 <h3>
                     <a href="neptune.php">Neptune</a>
@@ -165,7 +165,7 @@
         <div class="row">
             <div class="col-md-6 img-portfolio">
                 <a href="uranus.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/uranus.jpg" alt="">
                 </a>
                 <h3>
                     <a href="uranus.php">Uranus</a>
@@ -175,7 +175,7 @@
             </div>
             <div class="col-md-6 img-portfolio">
                 <a href="saturn.php">
-                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                    <img class="img-responsive img-hover" src="WDTpictures/saturn.jpg" alt="">
                 </a>
                 <h3>
                     <a href="saturn.php">Saturn</a>

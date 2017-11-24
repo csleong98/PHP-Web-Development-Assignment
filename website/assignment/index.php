@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">Places to Stay
-                    <a id="view-all-link" href="view-all.html">View all</a>
+                    <a id="view-all-link" href="view-all.php">View all</a>
             </div>
             </h2>
         </div>
